@@ -1,6 +1,6 @@
-# trello_clone
+# Kanban Board Demo
 
-> Trello Clone in Vue.js
+> This is a kanban board demo done in Vue.js. 
 
 ## Build Setup
 
