@@ -11,7 +11,7 @@
   </div>
 </template>
 <script>
-import List from './List.vue'
+const List = () => import('./List.vue')
 export default {
   components: { List },
   data(){

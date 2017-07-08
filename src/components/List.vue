@@ -4,8 +4,8 @@
       <h4 class="text-center">{{ list_description }}</h4>
     </div>
     <div  class="cards cards-list" 
-            :data-type="this.list_name" 
-            v-sortable="this.sortableConfig">
+          :data-type="this.list_name" 
+          v-sortable="this.sortableConfig">
       <CardEdit v-for="item in filteredListItems"
             class="draggable-card"  
             :item="item" 
@@ -25,8 +25,8 @@
   </div>
 </template>
 <script>
-  import CardEdit from './Card-Edit.vue'
-  import CardNew from './Card-New.vue'
+  const CardEdit = () => import('./Card-Edit.vue')
+  const CardNew  = () => import('./Card-New.vue')
   export default {
     props:[ 'list_name','list_description',
             'lists','list_items',
