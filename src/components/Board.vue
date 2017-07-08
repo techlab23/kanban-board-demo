@@ -1,17 +1,13 @@
 <template>
-  <div id="app">
-    <div class="container">
-      <div class="row">
-      <List v-for="(listItem, index) in lists" :key="index"
-            :list_name = 'listItem.name'
-            :list_description = 'listItem.description'
-            :header_color="listItem.header_color"
-            item_text = 'default item'
-            :lists = 'lists'
-            :list_items.sync = "items">
-      </List>
-      </div>
-    </div>
+  <div class="row board">
+    <List v-for="(listItem, index) in lists" :key="index"
+          :list_name = 'listItem.name'
+          :list_description = 'listItem.description'
+          :header_color="listItem.header_color"
+          item_text = 'default item'
+          :lists = 'lists'
+          :list_items.sync = "items">
+    </List>
   </div>
 </template>
 <script>
@@ -46,5 +42,7 @@ export default {
 }
 </script>
 <style>
-
+.board {
+  margin-top:5px;
+}
 </style>
