@@ -1,21 +1,28 @@
 <template>
   <div id="app">
-    <Board></Board>
+    <Navigation></Navigation>
+    <Board class="board"></Board>
   </div>
 </template>
 
 <script>
-import Board from './components/Board.vue'
+const Board = () => import('./components/Board.vue')
+const Navigation = () => import('./components/Navigation.vue')
+
 export default {
   name: 'app',
   components: {
-    Board
+    Board,
+    Navigation
   }
 }
 </script>
 
 <style>
 #app {
-  margin-top:20px;
+  margin-top:0px;
+}
+.board {
+  padding-top:10px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="card" :id="item.id">
-    <div class="card-block">
+    <div class="card-content">
       <!-- Item Display Markup Start -->
       <div v-show = "!isEditing">   
         {{item.text}}
@@ -12,12 +12,12 @@
       <!-- Item Display Markup End -->
       <!-- Form Markup Start -->
       <div v-show = "isEditing" class="form">
-        <div class="form-group">
-          <textarea rows="3" class="form-control" v-model="form.text"></textarea>
+        <div class="field">
+          <textarea rows="3" class="textarea" v-model="form.text"></textarea>
         </div>
-        <div class="form-group text-center">
-          <button class="btn btn-outline-primary btn-sm" @click.prevent="save">Save</button>
-          <button class="btn btn-outline-secondary btn-sm" @click.prevent="cancel">Cancel</button>
+        <div class="field has-text-centered">
+          <button class="button is-outlined is-small is-info" @click.prevent="save">Save</button>
+          <button class="button is-outlined is-small" @click.prevent="cancel">Cancel</button>
         </div>
       </div>
       <!-- Form Markup End -->

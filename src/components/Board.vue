@@ -1,29 +1,27 @@
 <template>
-  <div id="app">
-    <div class="container">
-      <div class="row">
-      <List v-for="(listItem, index) in lists" :key="index"
-            :list_name = 'listItem.name'
-            :list_description = 'listItem.description'
-            :header_color="listItem.header_color"
-            item_text = 'default item'
-            :lists = 'lists'
-            :list_items.sync = "items">
-      </List>
+    <div class="container is-fluid">
+      <div class="columns is-mobile is-tablet is-desktop">
+        <List v-for="(listItem, index) in lists" :key="index"
+              :list_name = 'listItem.name'
+              :list_description = 'listItem.description'
+              :header_color="listItem.header_color"
+              item_text = 'default item'
+              :lists = 'lists'
+              :list_items.sync = "items">
+        </List>
       </div>
     </div>
-  </div>
 </template>
 <script>
-import List from './List.vue'
+const List = () => import('./List.vue')
 export default {
   components: { List },
   data(){
     return {
       lists:[ 
-          { name:'todo',description:'To Do',header_color:'bg-info'},
-          { name:'doing',description:'Doing',header_color:'bg-warning'},
-          { name:'done',description:'Done',header_color:'bg-success'},
+          { name:'todo',description:'To Do',header_color:'is-info'},
+          { name:'doing',description:'Doing',header_color:'is-warning'},
+          { name:'done',description:'Done',header_color:'is-success'},
         ],
       items: [
         { id: 1, text: 'This is some text within a card block', list: 'todo' },

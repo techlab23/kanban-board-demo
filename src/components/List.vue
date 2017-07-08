@@ -1,7 +1,7 @@
 <template>
-  <div class="col">
-    <div class="heading" :class="this.header_color"> 
-      <h4 class="text-center">{{ list_description }}</h4>
+  <div class="column">
+    <div class="notification list-heading" :class="this.header_color"> 
+      <h4 class="subtitle is-4 has-text-centered">{{ list_description }}</h4>
     </div>
     <div  class="cards cards-list" 
             :data-type="this.list_name" 
@@ -25,8 +25,8 @@
   </div>
 </template>
 <script>
-  import CardEdit from './Card-Edit.vue'
-  import CardNew from './Card-New.vue'
+  const CardEdit = () => import('./Card-Edit.vue')
+  const CardNew = () => import('./Card-New.vue')
   export default {
     props:[ 'list_name','list_description',
             'lists','list_items',
@@ -95,19 +95,18 @@
   }
 </script>
 <style>
-  .heading {
-  padding:10px 10px;
-  color:#fff;
-}
-.cards-list {
-  min-height:300px;
-}
-.draggable-card {
-  border-radius:0px;
-}
-.fixed-card {
-  color:#ccc;
-  border:1px dotted #ccc; 
-  border-radius:0px;
-}
+  .list-heading {
+      margin-bottom: 0.5rem;
+  }
+  .cards-list {
+    min-height:300px;
+  }
+  .draggable-card {
+    border-radius:0px;
+  }
+  .fixed-card {
+    color:#ccc;
+    border:1px dotted #ccc; 
+    border-radius:0px;
+  }
 </style>
