@@ -1,6 +1,6 @@
-# Kanban Board Demo
+# This repository is not maintained any more. 
+Please follow [Task Management App](https://github.com/techlab23/task-management-app) repository for the updated app. 
 
-> This is a kanban board demo done in Vue.js. 
 
 ## Build Setup
 
